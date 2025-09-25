@@ -1,15 +1,9 @@
 import { createBrowserRouter } from 'react-router-dom';
 import { MainLayout, AuthLayout, MyPageLayout } from './components/layout';
 import Home from './pages/Home/Home';
+import Login from './pages/auth/Login';
 
 // 임시 컴포넌트들
-const TempLogin = () => (
-  <div className="bg-white p-8 rounded-lg shadow-md">
-    <h1 className="text-2xl font-bold text-center mb-4">로그인</h1>
-    <p className="text-center text-gray-600">로그인 페이지 준비중</p>
-  </div>
-);
-
 const TempCommunity = () => (
   <div className="max-w-6xl mx-auto px-6 py-8">
     <h1 className="text-3xl font-bold mb-6">커뮤니티</h1>
@@ -152,7 +146,7 @@ const router = createBrowserRouter([
     path: '/login',
     element: (
       <AuthLayout>
-        <TempLogin />
+        <Login />
       </AuthLayout>
     ),
   },
