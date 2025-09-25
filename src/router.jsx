@@ -1,12 +1,33 @@
 import { createBrowserRouter } from 'react-router-dom';
-import { MainLayout, AuthLayout } from '@components/layout';
-import Home from '@pages/Home/Home';
+import { MainLayout, AuthLayout } from './components/layout';
+import Home from './pages/Home/Home';
 
 // 임시 컴포넌트들
 const TempLogin = () => (
   <div className="bg-white p-8 rounded-lg shadow-md">
     <h1 className="text-2xl font-bold text-center mb-4">로그인</h1>
     <p className="text-center text-gray-600">로그인 페이지 준비중</p>
+  </div>
+);
+
+const TempCommunity = () => (
+  <div className="max-w-6xl mx-auto px-6 py-8">
+    <h1 className="text-3xl font-bold mb-6">커뮤니티</h1>
+    <p className="text-gray-600">커뮤니티 페이지 준비중입니다.</p>
+  </div>
+);
+
+const TempGallery = () => (
+  <div className="max-w-6xl mx-auto px-6 py-8">
+    <h1 className="text-3xl font-bold mb-6">갤러리</h1>
+    <p className="text-gray-600">갤러리 페이지 준비중입니다.</p>
+  </div>
+);
+
+const TempCommunityCreate = () => (
+  <div className="max-w-4xl mx-auto px-6 py-8">
+    <h1 className="text-3xl font-bold mb-6">동호회 만들기</h1>
+    <p className="text-gray-600">동호회 생성 페이지 준비중입니다.</p>
   </div>
 );
 
@@ -24,7 +45,15 @@ const router = createBrowserRouter([
     path: '/community',
     element: (
       <MainLayout>
-        <div className="p-8 text-center">커뮤니티 페이지 (준비중)</div>
+        <TempCommunity />
+      </MainLayout>
+    ),
+  },
+  {
+    path: '/community/create',
+    element: (
+      <MainLayout>
+        <TempCommunityCreate />
       </MainLayout>
     ),
   },
@@ -32,7 +61,7 @@ const router = createBrowserRouter([
     path: '/gallery',
     element: (
       <MainLayout>
-        <div className="p-8 text-center">갤러리 페이지 (준비중)</div>
+        <TempGallery />
       </MainLayout>
     ),
   },
@@ -48,4 +77,4 @@ const router = createBrowserRouter([
   },
 ]);
 
-export default router; // export { router }가 아닌 export default
+export default router;
