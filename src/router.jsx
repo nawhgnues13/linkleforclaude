@@ -2,6 +2,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import { MainLayout, AuthLayout, MyPageLayout } from './components/layout';
 import Home from './pages/Home/Home';
 import Login from './pages/auth/Login';
+import Register from './pages/auth/Register';
 
 // 임시 컴포넌트들
 const TempCommunity = () => (
@@ -39,14 +40,22 @@ const MyPageProfile = () => (
       <p className="text-gray-600">자기소개입니다.</p>
 
       <div className="flex justify-center space-x-4 mt-6">
-        <button className="bg-gray-200 text-gray-700 px-6 py-2 rounded-lg text-sm font-medium hover:bg-gray-300 transition-colors">축구</button>
-        <button className="bg-gray-200 text-gray-700 px-6 py-2 rounded-lg text-sm font-medium hover:bg-gray-300 transition-colors">야구</button>
+        <button className="bg-gray-200 text-gray-700 px-6 py-2 rounded-lg text-sm font-medium hover:bg-gray-300 transition-colors">
+          축구
+        </button>
+        <button className="bg-gray-200 text-gray-700 px-6 py-2 rounded-lg text-sm font-medium hover:bg-gray-300 transition-colors">
+          야구
+        </button>
       </div>
     </div>
 
     <div className="grid grid-cols-2 gap-4">
-      <button className="bg-white border-2 border-gray-300 text-gray-700 py-3 px-6 rounded-lg font-medium hover:border-[#4CA8FF] hover:text-[#4CA8FF] transition-colors">프로필 수정</button>
-      <button className="bg-white border-2 border-gray-300 text-gray-700 py-3 px-6 rounded-lg font-medium hover:border-[#4CA8FF] hover:text-[#4CA8FF] transition-colors">관심사 설정</button>
+      <button className="bg-white border-2 border-gray-300 text-gray-700 py-3 px-6 rounded-lg font-medium hover:border-[#4CA8FF] hover:text-[#4CA8FF] transition-colors">
+        프로필 수정
+      </button>
+      <button className="bg-white border-2 border-gray-300 text-gray-700 py-3 px-6 rounded-lg font-medium hover:border-[#4CA8FF] hover:text-[#4CA8FF] transition-colors">
+        관심사 설정
+      </button>
     </div>
   </div>
 );
@@ -147,6 +156,14 @@ const router = createBrowserRouter([
     element: (
       <AuthLayout>
         <Login />
+      </AuthLayout>
+    ),
+  },
+  {
+    path: '/signup',
+    element: (
+      <AuthLayout>
+        <Register />
       </AuthLayout>
     ),
   },

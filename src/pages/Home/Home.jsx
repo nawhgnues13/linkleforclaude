@@ -18,8 +18,14 @@ const Home = () => {
         {/* 검색바 */}
         <div className="mb-16 flex justify-center">
           <div className="relative w-full max-w-4xl">
-            <input type="text" placeholder="관심사를 입력해 주세요" className="w-full px-6 py-5 text-lg border-2 border-[#4CA8FF] rounded-full focus:outline-none bg-white shadow-sm" />
-            <div className="absolute right-6 top-1/2 transform -translate-y-1/2 text-[#4CA8FF] text-xl">🔍</div>
+            <input
+              type="text"
+              placeholder="관심사를 입력해 주세요"
+              className="w-full px-6 py-5 text-lg border-2 border-[#4CA8FF] rounded-full focus:outline-none bg-white shadow-sm"
+            />
+            <div className="absolute right-6 top-1/2 transform -translate-y-1/2 text-[#4CA8FF] text-xl">
+              🔍
+            </div>
           </div>
         </div>
 
@@ -31,7 +37,9 @@ const Home = () => {
                 <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mb-3 group-hover:shadow-md transition-shadow">
                   <span className="text-2xl">{category.icon}</span>
                 </div>
-                <span className="text-sm text-gray-700 text-center whitespace-nowrap group-hover:text-gray-900">{category.name}</span>
+                <span className="text-sm text-gray-700 text-center whitespace-nowrap group-hover:text-gray-900">
+                  {category.name}
+                </span>
               </div>
             ))}
           </div>
@@ -41,18 +49,25 @@ const Home = () => {
         <div className="mb-20">
           <div className="flex justify-between items-center mb-8">
             <h2 className="text-2xl font-bold text-gray-900">최근 생성된 동호회</h2>
-            <button className="text-gray-500 hover:text-[#4CA8FF] transition-colors">더보기 &gt;</button>
+            <button className="text-gray-500 hover:text-[#4CA8FF] transition-colors">
+              더보기 &gt;
+            </button>
           </div>
 
           <div className="grid grid-cols-3 gap-8">
             {[1, 2, 3].map((i) => (
-              <div key={i} className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow cursor-pointer">
+              <div
+                key={i}
+                className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow cursor-pointer"
+              >
                 <div className="w-full h-48 bg-gray-300 flex items-center justify-center">
                   <span className="text-gray-500">이미지</span>
                 </div>
                 <div className="p-6">
                   <h3 className="font-bold text-xl mb-3 text-gray-900">싸커풋볼 {i}</h3>
-                  <p className="text-gray-600 text-sm mb-4 leading-relaxed">동호회 소개 내용입니다.</p>
+                  <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+                    동호회 소개 내용입니다.
+                  </p>
                   <div className="flex justify-between items-center text-sm">
                     <div className="flex space-x-2">
                       <span className="bg-gray-100 px-3 py-1 rounded-full">스포츠</span>
@@ -69,7 +84,9 @@ const Home = () => {
 
       {/* 채팅 버튼 */}
       <div className="fixed bottom-8 right-8">
-        <button className="bg-[#4CA8FF] text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg">💬</button>
+        <button className="bg-[#4CA8FF] text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg">
+          💬
+        </button>
       </div>
     </div>
   );

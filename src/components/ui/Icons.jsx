@@ -1,7 +1,26 @@
-import { MagnifyingGlassIcon, ChatBubbleBottomCenterTextIcon, HomeIcon, UserGroupIcon, PhotoIcon, PlusIcon, UserIcon, HeartIcon, ShareIcon, BookmarkIcon, EllipsisHorizontalIcon, ChevronRightIcon, MapPinIcon, CalendarIcon, ClockIcon, UsersIcon } from '@heroicons/react/24/outline';
+import {
+  MagnifyingGlassIcon,
+  ChatBubbleBottomCenterTextIcon,
+  HomeIcon,
+  UserGroupIcon,
+  PhotoIcon,
+  PlusIcon,
+  UserIcon,
+  HeartIcon,
+  ShareIcon,
+  BookmarkIcon,
+  EllipsisHorizontalIcon,
+  ChevronRightIcon,
+  MapPinIcon,
+  CalendarIcon,
+  ClockIcon,
+  UsersIcon,
+} from '@heroicons/react/24/outline';
 
 // 기본 아이콘 컴포넌트
-const IconBase = ({ icon: Icon, className = 'w-6 h-6', ...props }) => <Icon className={className} {...props} />;
+const IconBase = ({ icon: Icon, className = 'w-6 h-6', ...props }) => (
+  <Icon className={className} {...props} />
+);
 
 // 자주 사용될 아이콘들을 개별 컴포넌트로 export
 export const SearchIcon = (props) => <IconBase icon={MagnifyingGlassIcon} {...props} />;
