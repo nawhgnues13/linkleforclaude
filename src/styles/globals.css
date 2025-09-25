@@ -1,0 +1,18 @@
+@import 'tailwindcss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Tailwind가 제대로 로드되었는지 테스트용 */
+.test-tailwind {
+  background-color: red;
+  color: white;
+  padding: 1rem;
+}
