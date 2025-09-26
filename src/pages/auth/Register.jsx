@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 export default function Register() {
   const [formData, setFormData] = useState({
@@ -95,15 +95,12 @@ export default function Register() {
         </div>
       </div>
 
-      {/* 제목 */}
       <div className="text-center mb-8">
         <h1 className="text-2xl font-bold text-gray-900 mb-2">회원가입</h1>
         <p className="text-gray-500 text-sm">링클에서 다양한 친구를 만나세요</p>
       </div>
 
-      {/* 폼 */}
       <form onSubmit={handleSubmit} className="space-y-4">
-        {/* 이메일 */}
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">이메일</label>
           <input
@@ -122,7 +119,6 @@ export default function Register() {
           )}
         </div>
 
-        {/* 비밀번호 */}
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">비밀번호</label>
           <input
@@ -149,7 +145,6 @@ export default function Register() {
           )}
         </div>
 
-        {/* 비밀번호 확인 */}
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">비밀번호 확인</label>
           <input
@@ -168,7 +163,6 @@ export default function Register() {
           )}
         </div>
 
-        {/* 이름 */}
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-2">이름</label>
           <input
@@ -187,7 +181,6 @@ export default function Register() {
           )}
         </div>
 
-        {/* 다음 버튼 */}
         <button
           type="submit"
           className="w-full py-3 bg-[#4CA8FF] text-white rounded-lg font-semibold hover:bg-[#3b8de6] transition-colors mt-6"
@@ -196,14 +189,12 @@ export default function Register() {
         </button>
       </form>
 
-      {/* 구분선 */}
       <div className="flex items-center my-6">
         <div className="flex-1 border-t border-gray-300"></div>
         <span className="px-3 text-sm text-gray-400">간편 회원가입</span>
         <div className="flex-1 border-t border-gray-300"></div>
       </div>
 
-      {/* 카카오 로그인 */}
       <button
         type="button"
         onClick={handleKakaoLogin}

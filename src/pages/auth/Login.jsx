@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Login() {
@@ -16,12 +16,10 @@ export default function Login() {
 
   return (
     <div className="w-full max-w-6xl grid grid-cols-2 gap-16">
-      {/* 왼쪽: 로고 */}
       <div className="flex items-center justify-start">
         <h1 className="text-8xl font-extrabold text-slate-700 leading-none">Linkle</h1>
       </div>
 
-      {/* 오른쪽: 로그인 폼 */}
       <div className="flex justify-end">
         <div className="w-full max-w-xl bg-white rounded-2xl shadow-xl p-8">
           <h2 className="text-2xl font-semibold text-gray-900 text-center mb-8">로그인</h2>
@@ -60,7 +58,6 @@ export default function Login() {
               로그인
             </button>
 
-            {/* 링크 묶음 */}
             <div className="text-center text-xs text-gray-500 py-2 space-x-2">
               <Link to="/signup" className="hover:underline">
                 회원가입
@@ -75,14 +72,12 @@ export default function Login() {
               </Link>
             </div>
 
-            {/* 구분선 + 캡션 */}
             <div className="flex items-center my-6">
               <div className="flex-grow border-t border-gray-300" />
               <span className="px-3 text-sm text-gray-400">간편 로그인</span>
               <div className="flex-grow border-t border-gray-300" />
             </div>
 
-            {/* 카카오 로그인 (크게) */}
             <button
               type="button"
               onClick={handleKakaoLogin}

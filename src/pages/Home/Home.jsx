@@ -1,6 +1,4 @@
-// src/pages/Home/Home.jsx - 구조 테스트를 위한 간단한 버전
 const Home = () => {
-  // 카테고리 데이터
   const categories = [
     { name: '운동/스포츠', icon: '⚽' },
     { name: '문화/예술', icon: '🎨' },
@@ -15,7 +13,6 @@ const Home = () => {
   return (
     <div className="bg-gray-50 min-h-screen">
       <div className="max-w-6xl mx-auto px-6 py-8">
-        {/* 검색바 */}
         <div className="mb-16 flex justify-center">
           <div className="relative w-full max-w-4xl">
             <input
@@ -29,7 +26,6 @@ const Home = () => {
           </div>
         </div>
 
-        {/* 카테고리 */}
         <div className="mb-20 flex justify-center">
           <div className="flex space-x-10">
             {categories.map((category, index) => (
@@ -45,7 +41,6 @@ const Home = () => {
           </div>
         </div>
 
-        {/* 동호회 카드들 */}
         <div className="mb-20">
           <div className="flex justify-between items-center mb-8">
             <h2 className="text-2xl font-bold text-gray-900">최근 생성된 동호회</h2>
@@ -82,7 +77,6 @@ const Home = () => {
         </div>
       </div>
 
-      {/* 채팅 버튼 */}
       <div className="fixed bottom-8 right-8">
         <button className="bg-[#4CA8FF] text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg">
           💬
